@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap");
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(-140deg, #f2f2f2, #aa7382);
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 40em;
+  /*   height: 90vh; */
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+
+  background-image: url("https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 2em 2em;
+  background-color: #fafafa;
+  width: 20em;
+}
+
+.modal-content-title {
+  display: flex;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #333333;
+}
+
+.modal-content-title .fas {
+  color: #7fc0ba;
+  margin-right: 4px;
+}
+
+.modal-content-subtitle {
+  display: block;
+  padding: 1em 0 0;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #a8a8a8;
+}
+
+.buttons1,
+.buttons2 {
+  display: flex;
+  padding: 1.3em 0 0.2em;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 -0.3em;
+}
+
+.facebook,
+.xing {
+  flex: 1 0 calc(50% - 15px);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  height: 2.5em;
+  padding: 5px 1em;
+  text-align: center;
+  border-style: none;
+  border-radius: 3px;
+  color: #f2f2f2;
+  margin: 0 0.5em;
+}
+
+@media (max-width: 800px) {
+  .modal {
+    width: auto;
+  }
+  .modal-content {
+    padding: 2em 2em 0.8em;
+    width: 21em;
+  }
+  .buttons1 {
+    flex-direction: column;
+  }
+  .facebook {
+    margin-bottom: 0.5em;
+  }
+}
+
+.buttons1 .facebook {
+  background-color: #3b5998;
+}
+
+.buttons1 .xing {
+  background-color: #026466;
+}
+
+.buttons1 .facebook .fab,
+.buttons1 .xing .fab {
+  margin-right: 0.5em;
+}
+
+.buttons2 {
+  justify-content: flex-start;
+}
+
+.login,
+.signup {
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  width: 7em;
+  height: 2.7em;
+  border-style: none;
+  border-radius: 3px;
+  color: #f2f2f2;
+}
+
+.buttons2 .login {
+background-color: #fff;
+  color: #464646;
+  border: 1px solid #bbb;
+
+}
+
+.buttons2 .signup {
+  margin-right: 1.5em;
+  background-image: linear-gradient(-90deg, #4268a7, #aa7382);
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4em;
+  color: #afafaf;
+  font-size: 0.8em;
+  margin: 0.5em 0;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  color: #323232;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.forms .email-p,
+.password-p {
+  margin-block-end: 0;
+}
+
+.forms .email-p {
+  margin-block-start: 0;
+}
+
+.forms .input {
+  outline: none;
+  background: none;
+  width: 100%;
+  height: 30px;
+  border: 0;
+  border-bottom: 1px solid #aa7382;
+  color: #434343;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.tyc {
+  font-size: 0.9em;
+  color: #434343;
+}
+
+.subform {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #a8a8a8;
+  margin-top: 15px;
+}
+
+/* .subform .checkbox {
+  display: block;
+} */
+
+.a {
+  text-decoration: none;
+  color: #a8a8a8;
+}
+
+.a:hover {
+  color: #4a8ad9;
+}

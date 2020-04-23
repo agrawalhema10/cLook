@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+{% include "police/head.html" %}
+<body class="">
+	    {% include "police/nav.html" %}
+		<!-- Header -->
+		<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+			<div class="container-fluid">
+				<div class="header-body">
+					<!-- Card stats -->
+					<div class="row">
+
+			  <div class="col-xl order-xl-1">
+				<div class="card bg-secondary shadow">
+				  <div class="card-header bg-white border-0">
+					<div class="row align-items-center">
+					  <div class="col-8">
+						<h3 class="mb-0">Search Criminals</h3>
+					  </div>
+					</div>
+				  </div>
+				  <div class="card-body">
+					  <div class="pl-lg-12">
+						  <form role="form-group" class="form-group" action="search_criminal" method="post">{% csrf_token %}
+						<div class="row">
+
+						  <div class="col-lg-3">
+							<div class="form-group">
+							  <label class="form-control-label" for="eng_name">Criminal Id</label>
+                                <input type="search" placeholder="Search Criminal" name="S_Cid">
+                            </div>
+						  </div>
+						 <div class="pl-lg-4">
+						<div class="form-group">
+						  <button type="submit"  id="add_btn" class="btn btn-md btn-primary">Search</button>
+						</div>
+					  </div>
+							</form>
+						</div>
+					  </div>
+
+				  </div>
+				</div>
+			  </div>
+
+		  </div>
+				</div>
+			</div>
+		</div>
+
+
+	{% include "police/scripts.html" %}
+	<script type="text/javascript">
+
+	</script>
+</body>
+
+</html>

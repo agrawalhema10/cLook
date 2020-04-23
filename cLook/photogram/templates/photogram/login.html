@@ -1,0 +1,48 @@
+<html>
+<title>Photogram|Login</title>
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{%static 'css/codepen1.css' %}">
+</head>
+<script src="https://kit.fontawesome.com/d4b981459a.js" crossorigin="anonymous"></script>
+
+<body>
+  <div class=wrapper>
+    <div class=modal>
+      <div class="modal-content">
+        <span class="modal-content-title"><i class="fas fa-cat"></i>
+          Photogram
+        </span>
+        <span class="modal-content-subtitle">
+          Welcome back, please log in to your account.
+        </span>
+        <br>
+         <form method="post" enctype="multipart/form-data" action="profo">{% csrf_token %}
+        <div class="forms">
+          <div class="email">
+            <p class="email-p">Email address</p>
+            <input class="input" type="email" name="email">
+          </div>
+          <div class="password">
+            <p class="password-p">Password</p>
+            <input class="input" type="password" name="password">
+          </div>
+        </div>
+        <div class="subform">
+          <label><input class="checkbox" type="checkbox"> Remember me</label>
+          <a class="a" href="#">Forgot password</a>
+        </div>
+        <div class="buttons2">
+          <button class="login" type="submit">
+            Log in
+          </button>
+        </div>
+         </form>
+        <p class="tyc">
+          By signing up you agree to Housy's <a class="a" href="#">Terms and conditions</a> and <a class="a" href="#">Privacy policy.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

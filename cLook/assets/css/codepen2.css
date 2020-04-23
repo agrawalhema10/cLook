@@ -1,0 +1,58 @@
+/*======================basis-member============================*/
+
+.member-box {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 300px;
+    margin: 100px auto;
+    font-family: 'Raleway', sans-serif;
+}
+.member-box .shape {
+    width: 200px;
+    height: 200px;
+    background: var(--primary);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    transform: rotate(45deg);
+}
+
+.member-box .card-img-top {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+.member-box:hover .card-img-top {
+    box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1)
+}
+
+.member-box .member-degignation {
+    color: var(--green);
+}
+
+.member-box .member-title {
+
+}
+
+.member-box small {
+    font-size: 12px;
+}
+
+.member-box .social a {
+    font-size: 15px;
+    color: var(--green);
+    padding: 10px;
+}
+
+.member-box .card-footer {
+    background-color: transparent;
+    border: 0;
+}

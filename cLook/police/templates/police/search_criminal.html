@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+{% include "police/head.html" %}
+<body class="">
+	    {% include "police/nav.html" %}
+		<!-- Header -->
+		<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+			<div class="container-fluid">
+				<div class="header-body">
+					<!-- Card stats -->
+					<div class="row">
+
+			  <div class="col-xl order-xl-1">
+				<div class="card bg-secondary shadow">
+				  <div class="card-header bg-white border-0">
+					<div class="row align-items-center">
+					  <div class="col-8">
+						<h3 class="mb-0">Search Criminals</h3>
+					  </div>
+					</div>
+				  </div>
+				  <div class="card-body">
+					  <div class="pl-lg-12">
+						  <form role="form-group" class="form-group" action="search_criminal" method="post">{% csrf_token %}
+						<div class="row">
+
+						  <div class="col-lg-3">
+							<div class="form-group">
+                                <table>
+                                    <tr><td><label class="form-control-label" for="eng_name">Criminal Id</label></td>
+                                        <td><input type="search" placeholder={{obj.cid}} name="S_Cid"></td>
+                            </div>
+						  </div>
+						 <div class="pl-lg-4">
+						<div class="form-group">
+                            <td>  <button type="submit"  id="add_btn" class="btn btn-md btn-primary">Search</button></td></tr></table>
+						</div>
+					  </div>
+							</form>
+						</div>
+					  </div>
+
+				  </div>
+				</div>
+			  </div>
+
+		  </div>
+				</div>
+			</div>
+        <br>
+        <br>
+        <br><br>
+
+        <div class="container-fluid mt&#45;&#45;7">
+			<div class="row mt-5">
+				<div class="col-xl-12 mb-5 mb-xl-0">
+					<div class="card shadow">
+						<div class="card-header border-0">
+							<div class="row align-items-center">
+								<div class="col">
+									<h3 class="mb-0">Criminal Record</h3>
+								</div>
+							</div>
+						</div>
+						<div class="table-responsive">
+							<!-- Projects table -->
+							<table class="table align-items-center table-flush">
+								<thead class="thead-light">
+									<tr>
+										<th scope="col">Criminal Name</th>
+										<th scope="col">Criminal ID</th>
+										<th scope="col">Criminal photo</th>
+										<th scope="col">Status</th>
+										<th scope="col">Social Media Username</th>
+									</tr>
+								</thead>
+
+								<tbody>
+
+								<tr>
+									<td>{{obj.name}}</td>
+								<td>{{obj.cid}}</td>
+									<td><img src={{obj.photo.url}} width="100" height="100"></img></td>
+									<td>{{obj.status}}</td>
+									<td>{{obj.social_media_id}}</td>
+								</tr>
+
+
+								</tbody>
+
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div
+		</div>
+
+
+	{% include "police/scripts.html" %}
+	<script type="text/javascript">
+
+	</script>
+</body>
+
+</html>

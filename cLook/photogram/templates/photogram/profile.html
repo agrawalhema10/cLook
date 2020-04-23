@@ -1,0 +1,36 @@
+<html>
+<title>Photogram|Login</title>
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{%static 'css/codepen2.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+</head>
+<body>
+ <div id="main-card">
+        <div class="cover-photo"></div>
+        <div class="photo">
+            <img src={{obj.profile_pic.url}} alt="">
+        </div>
+        <div class="content">
+            <h2 class="name">{{obj.username}}</h2>
+            <h3 class="fullstack">{{obj.location}}</h3>
+            <h3 class="email">
+                <a href="mailto:abbassi.abdeladhim31791@gmail.com">{{obj.email}}</a>
+            </h3>
+        </div>
+        <div class="contact">
+            <ul>
+                <a href="https://www.linkedin.com/in/abdeladhim-abbassi-5026b0120/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Adhouma" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="https://codepen.io/Adhouma/" target="_blank">
+                    <i class="fa fa-codepen"></i>
+                </a>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

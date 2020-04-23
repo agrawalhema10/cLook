@@ -1,0 +1,45 @@
+<html>
+<title>Photogram|Login</title>
+{% load static %}
+<head>
+
+<link rel="stylesheet" href="{%static 'css/codepen1.css' %}">
+<script src="https://kit.fontawesome.com/d4b981459a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class=wrapper>
+    <div class=modal>
+      <div class="modal-content">
+        <span class="modal-content-title"><i class="fas fa-cat"></i>
+          Photogram
+        </span>
+        <span class="modal-content-subtitle">
+          Welcome back, please Register or log in to your account.
+        </span>
+
+        <div class="forms">
+          <form method="post" enctype="multipart/form-data">{% csrf_token %}
+          {{form.as_p}}
+          <div class="buttons2">
+          <button class="signup" type="submit">
+            Sign up
+          </button>&nbsp;&nbsp;&nbsp;
+          <a class="login" href="p_log">
+            Log in
+          </a>
+        </div>
+          </form>
+        </div>
+        <div class="subform">
+          <label><input class="checkbox" type="checkbox"> Remember me</label>
+          <a class="a" href="#">Forgot password</a>
+        </div>
+
+        <p class="tyc">
+          By signing up you agree to Photogram's <a class="a" href="#">Terms and conditions</a> and <a class="a" href="#">Privacy policy.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
